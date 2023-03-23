@@ -1,0 +1,140 @@
+Challenge 1: Implement the Rectangle Class Using the Concepts of Encapsulation
+
+
+Problem Statement
+You are given a partially completed code of a Rectangle class in the editor. Add two fields i.e. length and width and modify the default and parametrized constructors which assign parameters to the length and width fields of the Rectangle class. In the end, Implement the getArea() method which returns the area of the rectangle.
+
+Input
+Calls the constructor by passing length and width.
+Calls the `getArea()` method to return the area.
+Output
+Returns the area of a rectangle.
+Sample Input
+        Rectangle obj = new Rectangle(2, 2);
+Sample Output
+        4
+        
+   SOLUTION
+   
+// Class Rectangle
+class Rectangle {
+
+  // Private Fields
+  private int length;
+  private int width;
+
+  // Default Constructor
+  public Rectangle() {
+    this.length = 0;
+    this.width = 0;
+  }
+
+  // Parameterized Constructor
+  public Rectangle(int length, int width) {
+    this.length = length;
+    this.width = width;
+
+  }
+
+  // Method to calculate Area of a rectangle
+  public int getArea() {
+    return this.length * this.width; 
+  }
+  
+}
+
+class Demo {
+
+  public static void main(String args[]) {
+
+    Rectangle obj = new Rectangle(2, 2);
+    System.out.println(obj.getArea());
+
+  }
+
+}
+
+
+
+Challenge 2: Implement the Complete Student Class
+
+
+Problem Statement 
+You are given a Student class in the editor. Your task is to add two fields:
+
+String name
+String rollNumber
+and provide getter/setters for these fields:
+
+getName
+setName
+getRollNumber
+setRollNumber
+Implement this class according to the rules of encapsulation.
+
+Input 
+Checking all fields and getters/setters
+
+Output 
+Expecting perfectly defined fields and getter/setters.
+
+There is no need to add constructors in this class.
+
+
+
+solution
+
+// Student Class
+class Student {
+
+  // Private Fields
+  private String name;
+  private String rollNumber;
+  public Student(){
+    name = "Unknown";
+    rollNumber = "N/A";
+  }
+
+
+  // getter function for name
+  public String getName() {
+    return name;  
+  }
+
+  // setter function for name
+  public void setName(String x) {
+    this.name = x;
+  }
+
+  // getter function for roll number
+  public String getRollNumber() {
+    return this.rollNumber;  
+  }
+
+  // setter function for roll number
+  public void setRollNumber(String x) {
+    this.rollNumber = x;
+  }
+
+}
+
+public class main
+{
+	public static void main(String[] args) {
+    Student x = new Student();
+    System.out.println(x.getName());
+    x.setName("Samantha");
+    String student_name = x.getName();
+    System.out.println(student_name);
+
+    System.out.println(x.getRollNumber());
+    x.setRollNumber("2211");
+    String student_rollnum = x.getRollNumber();
+    System.out.println(student_rollnum);
+
+   
+	}
+}
+
+
+
