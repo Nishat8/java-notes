@@ -1,0 +1,117 @@
+The word Polymorphism is a combination of two Greek words, Poly means many and Morph means forms.
+
+In programming, polymorphism refers to the same object exhibiting different forms and behaviors.
+
+For example, take the Shape Class. The exact shape you choose can be anything. It can be a rectangle, a circle, a polygon or a diamond. So, these are all shapes but their properties are different. This is called Polymorphism.
+
+
+
+Many Shapes
+A brief introduction
+Assume there is a base class named Shape from which the subclasses Rectangle, Circle, Polygon, and Diamond are derived. Also consider that the Shape class has a method called calculateArea(), which is inherited by all subclasses mentioned. With polymorphism, each subclass may have its way of implementing the method.
+
+So, for example, when the calculateArea() method is called in an object of the Rectangle class, the method might respond by displaying the area of the rectangle. On the other hand, when the same method is called in an object of the Circle class, the circle’s area might be calculated and displayed on the screen.
+
+In effect, polymorphism cuts down the work of the developer because when the time comes to create more specific subclasses with certain unique attributes and behaviors, the developer can alter the code in the particular portions where the responses differ. All other pieces of the code can be left untouched
+
+
+
+***METHOD OVERRIDING****
+
+Method overriding is the process of redefining a parent class’s method in a subclass.
+
+In other words, if a subclass provides the specific implementation of a method that has been declared by one of its parent classes, it is known as method overriding.
+
+For example, the Rectangle and Circle classes can override the getArea() method from the Shape class.
+
+Overriding is done so that a child class can give its own implementation to a method which is already provided by the parent class.
+
+In this case:
+
+The method in the parent class is called overridden method.
+The methods in the child classes are called overriding methods.
+The highlighted portions in the code snippet below show where method overriding is happening.
+
+Let’s have a look!
+
+// A sample class Shape which provides a method to get the Shape's area
+class Shape {
+
+  public double getArea() {
+    return 0;
+  }
+  
+}
+
+// A Rectangle is a Shape with a specific width and height
+class Rectangle extends Shape {   // extended form the Shape class
+
+  private double width;
+  private double height;
+
+  public Rectangle(double width, double height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  public double getArea() {
+    return width * height; 
+  }
+}
+
+// A Circle is a Shape with a specific radius
+class Circle extends Shape {
+  
+  private double radius;
+
+  public Circle(double radius) {
+    this.radius = radius; 
+  }
+  public double getArea() {
+    return 3.14 * radius * radius; 
+  }
+  
+}
+
+
+class driver {
+
+  public static void main(String args[]) {
+    Shape[] shape = new Shape[2]; // Creating shape array of size 2
+
+    shape[0] = new Circle(2); // creating circle object at index 0
+    shape[1] = new Rectangle(2, 2); // creating rectangle object at index 1
+
+    // Shape object is calling children classes method
+    System.out.println("Area of the Circle: " + shape[0].getArea());
+    System.out.println("Area of the Rectangle: " + shape[1].getArea());
+  }
+
+}
+
+
+
+Advantages of the method overriding
+Method overriding is very useful in OOP. Some of its advantages are stated below:
+
+The derived classes can give their own specific implementations to inherited methods without modifying the parent class methods.
+
+For any method, a child class can use the implementation in the parent class or make its own implementation.
+
+Key features of the method overriding
+Here are some key features of method overriding:
+
+Method overriding needs inheritance and there should be at least one derived class.
+
+Derived class(es) must have the same declaration, i.e., access modifier, name, same parameters and same return type as the method as of the base class.
+
+The method in the derived class(es) must have different implementations from each other.
+
+The method in the base class must be overridden in the derived class.
+
+Base class/method must not be declared as a final class.
+
+
+
+
+
