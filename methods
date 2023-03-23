@@ -1,0 +1,120 @@
+Methods act as an interface between a program and the data fields of a class in the program.
+
+These methods can either alter the content of the data fields or use their values to perform a certain computation. All the useful methods should be public, although, some methods which do not need to be accessed from the outside could be kept private.
+
+Definition and declaration
+A method is a group of statements that performs some operations and may or may not return a result.
+
+class Car {
+
+  // Public method to print speed
+  public void printSpeed(int speed) {
+    System.out.println("Speed: " + speed);
+    }
+  
+}
+
+class Demo {
+  
+  public static void main(String args[]) {
+    Car car = new Car();
+    car.printSpeed(100); // calling public method
+  }
+  
+}
+
+Method parameters and return type
+Method parameters make it possible to pass values to the method and return type makes it possible to get the value from the method. The parameters are declared inside the parentheses after the method name while the return type is declared before method name.
+
+Return statement
+For methods that define a return type, the return statement must be immediately followed by return value
+
+Getters and setters
+These two types of methods are very popular in OOP. A get method retrieves the value of a particular data field, whereas a set method sets its value.
+
+It is a common convention to write the name of the corresponding member fields with the get or set command.
+
+Let’s write get and set methods for ‘speed’ in our Car class:
+
+// Car class
+class Car {
+  
+  private int speed; // member field speed
+
+  // Setter method to set the speed of the car
+  public void setSpeed(int x) {
+    speed = x; 
+  }
+
+  // Getter method to get the speed of the car
+  public int getSpeed() {
+    return speed; 
+  }
+  
+}
+
+class Demo {
+  
+   public static void main(String args[]) {
+     Car car = new Car();
+     car.setSpeed(100); // calling the setter method
+     System.out.println(car.getSpeed()); // calling the getter method
+   } 
+  
+}
+
+Method overloading
+Overloading refers to making a method perform different operations based on the nature of its arguments.
+
+Methods can be overloaded in Java.
+
+We could redefine a method several times and give it different arguments and method types. When the method is called, the appropriate definition will be selected by the compiler!
+
+Let’s see this in action by overloading the product method in the Calculator class:
+class Calculator {
+
+  public double product(double x, double y) {
+    return x * y;
+  }
+
+  // Overloading the function to handle three arguments
+  public double product(double x, double y, double z) {
+    return x * y * z;
+  }
+
+  // Overloading the function to handle int
+  public int product(int x, int y){
+    return x * y;
+  }
+
+}
+
+class Demo {
+  
+  public static void  main(String args[]) {
+    Calculator cal = new Calculator();
+    
+    double x = 10;
+    double y = 20;
+    double z = 5;
+    
+    int a = 12;
+    int b = 4;
+    
+    System.out.println(cal.product(x, y));
+    System.out.println(cal.product(x, y, z));
+    System.out.println(cal.product(a, b));
+  }
+  
+} 
+
+
+Advantages of method overloading
+One might wonder if we could simply create new methods to perform different jobs rather than overloading the same method. However, an obvious benefit is that the code becomes simple and clean. We don’t have to keep track of different methods.
+
+Polymorphism is a very important concept in object-oriented programming, and method overloading plays a vital role in its implementation.
+
+
+
+
+
