@@ -4,7 +4,7 @@ Such programs consist of independent self-managing modules and their interaction
 
 An object is an instance of a module, and a class is its definition.
 
-We can use any of the above-mentioned types in the program, but they provide very limited features to the developers. Well, object-oriented programming wouldn’t make sense if we couldn’t make our own objects. This is where classes come into play.
+ Well, object-oriented programming wouldn’t make sense if we couldn’t make our own objects. This is where classes come into play.
 
 Classes are used to create user-defined data types. The predefined data types in Java are classes themselves. We can use these basic data types to create our own class. The cool part is that our class can contain multiple variables, pointers, and functions which would be available to us whenever a class object is created.
 
